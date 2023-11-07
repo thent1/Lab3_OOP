@@ -20,7 +20,7 @@ public class LineShape extends Shape {
             line.setStartY(mouseEvent.getY());
             line.setEndY(mouseEvent.getY());
             line.setEndX((mouseEvent.getX()));
-            line.setStroke(Color.BLACK);
+            line.setStroke(Color.RED);
             line.setStrokeWidth(2);
             root.getChildren().add(line);
         });
@@ -35,6 +35,7 @@ public class LineShape extends Shape {
 
         root.setOnMouseReleased(mouseEvent -> {
             if (line != null){
+                line.setStroke(Color.BLACK);
                 line = null;
             }
 
